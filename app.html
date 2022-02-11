@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+<title>
+three.js Exercise
+</title>
+
+<style>
+body {  margin: 0;
+        overflow: hidden;
+     }
+canvas { position: absolute;width: 100%; height: 100%; z-index: -1 }
+#tutor { 
+    position: absolute;
+    width: 100%; 
+    height: 100%; 
+    z-index: 30; 
+    opacity: 0.7; 
+    background-color: black; 
+    color: white; 
+}
+#center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #FFFF00;
+    padding: 10px;
+    display: flex;  
+    flex-wrap: wrap;
+}
+#control{
+    width:50%
+}
+.pControl{
+    text-align: center;
+}
+#explanation{
+    width:50%
+}
+.pExplanation{
+    text-align: center;
+}
+#loading{
+    font-size: 20pt;
+    color: red;
+}
+div#status{ z-index: 20; position: absolute;}
+#status p{color: greenyellow;}
+#gui{z-index: 20;}
+
+</style>
+
+</head>
+
+<body>
+    <div id = "tutor">
+        <div id = "center">
+            <div id = "control"> 
+                <p class = "pControl"> WASD - Move </p>
+                <p class = "pControl"> SHIFT - Run </p>
+                <p class = "pControl"> SPACEBAR - Shoot </p>
+            </div>
+            <div id = "explanation">
+                <p class = "pExplanation">Explanation: Shoot a ball to the object to see what it does.</p>
+                <p class = "pExplanation" id = "loading">LOADING</p>
+                <p class = "pExplanation" id = "instructions"></p>
+            </div> 
+        </div>
+    </div>
+    <div id="status">
+        <p>Active Elements: </p>
+        <p id = "twistCube">Twisting Cube: </p>
+        <p id = "floatPlane">Floating Plane: </p>
+        <p id = "spring">Spring: </p>
+        <p id = "snow" >Snow: </p>
+        <p id = "portal" >Portal: </p>
+        <p id = "fireworks" >Fireworks: </p>
+    </div>
+    
+    <script type = "module" src="app.js"></script>
+</body>
+
+</html>
